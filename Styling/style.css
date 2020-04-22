@@ -1,0 +1,354 @@
+/*-----------------Page Setup-----------------*/
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body { /*background-color: #4ABDAC;*/ }
+
+#h1main 
+{
+	margin-top: 35px;
+	text-align: center;
+	font-family: Arial, "Arial Unicode MS", sans-serif;
+}
+
+#pmain
+{
+	text-align: center;
+	font-family: Arial, "Arial Unicode MS", sans-serif;
+	font-style: italic;
+}
+
+.page-container
+{
+	position: relative;
+	top: 15px;
+	display: grid;
+	grid-template-columns: 1fr 931.5px 1fr;
+}
+
+
+
+
+
+
+/*-----------------Menu-----------------*/
+
+.menu ul li 
+{
+	/*border: 1px solid yellow;*/
+	list-style: none;
+	padding: 35px 20px;
+	display: inline-block;
+}
+
+.menu ul li .menubutton 
+{
+	/*border: 1px solid red;*/
+	text-decoration: none;
+	font-size: 14px;
+	font-family: arial;
+	color: black;
+}
+
+.menu 
+{
+	/*border: 1px solid white;*/
+	width: 100%;
+	text-align: center;
+}
+
+.menubutton::after 
+{
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background: black;
+	transition: width .3s;
+}
+
+.menubutton:hover::after
+{
+	width: 100%;
+	transition: width .3s;
+}
+
+
+
+
+/*-----------------Info Box-----------------*/
+
+.info-box-container
+{
+	margin: 5px 20px;
+	/*background-color: orange;*/
+	border-radius: 15px;
+}
+
+.info-box
+{
+	position: absolute;
+	visibility: hidden;
+}
+
+
+
+
+
+/*-----------------Periodic Table-----------------*/
+
+
+.table1
+{
+	/*border: 1px solid blue;*/
+	height: 575px; 
+	width: 931.5px;
+	display: grid;
+	grid-template-columns: repeat(18, 1fr);
+	grid-template-rows: repeat(7, 1fr) 10px 1fr 1fr;
+}
+
+.element
+{
+	position: relative;
+	margin: 1px;
+	border-radius: 0px;
+}
+
+.element a p, .element p
+{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	font-family: Arial, "Arial Unicode MS", sans-serif;
+	font-style: normal;
+	color: white;
+}
+
+.text-key label
+{
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+}
+
+.text-key 
+{
+	position: absolute;
+	top: 17%;
+	left: 13.5%;
+}
+
+
+
+.color-key
+{
+	position: absolute;
+	top: 14%;
+	left: 30%;
+	display: grid;
+	width: 330px;
+	grid-template-columns: 1fr 125px 1fr 140px
+}
+.color-key p
+{
+	font-size: 14px;
+	font-family: 'Lato', sans-serif;
+	margin-left: 2px;
+}
+.color-key div
+{
+	margin: 3px;
+}
+
+
+.table-container a 
+{
+	text-decoration: none;
+
+}
+
+.table-container
+{
+	position: relative;
+}
+
+.circle
+{
+	margin: 2px;
+	position: absolute;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+}
+
+.actinoid .circle { background-color: #d4d656; }
+.lanthanoid .circle { background-color: #81de52; }
+.transition-metal .circle { background-color: #ff01ee; }
+
+
+/*Corrections for elements w big names*/
+
+#mo .name, #mn .name, #mg .name, #sg .name, #lv .name, {font-size: 0.55em; top: 59%;}
+#ts .name, #ge .name, #mc .name, #og .name, #lr .name {font-size: 0.55em; top: 59%;}
+#nd .name, #pm .name, #gd .name, #pa .name, #cf .name, #es .name {font-size: 0.55em; top: 59%;}
+#rf .name, #ds .name, #rg .name, #cn .name, #p .name, #pr .name {font-size: 0.48em; top: 60%; }
+
+
+.element .atomic-number
+{
+	right: 3%;
+	text-align: right;
+	font-size: 0.75em;
+}
+.abr
+{
+	top: 22%;
+	font-size: 20px;
+}
+.name
+{
+	top: 57%;
+	font-size: 0.62em;
+}
+.amu
+{
+	top: 76%;
+	font-size: 0.7em;
+}
+#he
+{
+	grid-column: 18;
+}
+#al, #b
+{
+	grid-column: 13;
+}
+.table2
+{
+	display: grid;
+	grid-template-columns: repeat(14, 1fr);
+	grid-template-rows: 1fr 1fr;
+	grid-column: 3 / 17;	
+	grid-row: 9 / 11;	
+}
+
+/*Section Colors*/
+
+.alkali-metal, .alkali-metal-key { background-color: rgb(0, 142, 255); }
+.alkali-metal:hover { background-color: rgb(0, 180, 255); }
+
+
+.alkaline-earth, .alkaline-earth-key { background-color: rgb(100, 210, 255); }
+.alkaline-earth:hover { background-color: rgb(100, 247, 255); }
+
+
+.lanthanoid, .lanthanoid-key { background-color: rgb(175, 82, 222); }
+.lanthanoid:hover { background-color: rgb(220, 82, 222); }
+
+
+.actinoid, .actinoid-key { background-color: rgb(88, 86, 214); }
+.actinoid:hover { background-color: rgb(102, 99, 255); }
+
+
+.transition-metal, .transition-metal-key { background-color: #01ff12;}
+.transition-metal:hover { background-color: #01ff9e; }
+
+
+.post-transition-metal, .post-transition-metal-key { background-color: #2ECC40;}
+.post-transition-metal:hover { background-color: #35e84a; }
+
+
+.metalloid, .metalloid-key { background-color: rgb(255, 214, 10); }
+.metalloid:hover { background-color: rgb(250, 232, 142); }
+
+
+.other-nonmetal, .other-nonmetal-key { background-color: #FF851B; }
+.other-nonmetal:hover { background-color: #ffad66; }
+
+
+.noble-gas, .noble-gas-key { background-color: #FF4136; }
+.noble-gas:hover { background-color: #ff847d; }
+
+.none, .none-key { background-color: #cccccc; }
+.none:hover { background-color: #AAAAAA; }
+
+/*.transition-metal p, .transition-metal a p {color: #ff01ee;}*/
+
+
+
+/*-----------------Pause/Play Button-----------------*/
+
+audio
+{
+	outline: 0;
+	display: block;
+	margin: auto;
+	position: relative;
+	top: 40px;
+	visibility: hidden;
+}
+
+.audioDNE
+{
+	position: absolute;
+	width: 100%;
+	top: 800px;
+	text-align: center;
+	font-size: 22px;
+	font-family: 'Lato', sans-serif;
+	visibility: hidden;
+}
+
+.credit
+{
+	font-family: Arial, "Arial Unicode MS", sans-serif;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	font-size: small;
+	text-transform: uppercase;
+	bottom: 28px;
+}
+.webCredit
+{
+	font-family: Arial, "Arial Unicode MS", sans-serif;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	font-size: small;
+	text-transform: uppercase;
+	bottom: 10px;
+}
+
+
+.s
+{
+	border: 2px solid black;
+}
+
+/*-----------------Download Page-----------------*/
+
+.download-container
+{
+	width: 600px;
+	height: 600px;
+	margin: 75px auto;
+	border: 1px solid black;
+	border-radius: 7px;
+}
+
+.files-container
+{
+	margin: 3px;
+	border: 1px solid black;
+}
+.files-container a
+{
+	margin: 0;
+	text-align: left;
+	display: block;
+}
