@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Listen to the Elements</title>
+		<link rel="stylesheet" type="text/css" href="Styling/style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+	</head>
+	<body id="bod">
+		<nav class = "menu">
+			<ul>
+				<li>
+				 <a href="index.html" class="menubutton">listen</a></li><li>
+				 <a href="download.html" class="menubutton">download</a></li><li>
+				 <a href="contact.html" class="menubutton">contact</a></li><li>
+				 <a href="about.html" class="menubutton">about</a></li>
+			</ul>
+		</nav>
+		<h1 id="h1main">The Periodic Table of Sounds</h1>
+		<p id="pmain">click an element to listen!</p>
+		<div class="page-container">
+			<div class="info-box-container">
+				<div class="info-box h">
+					<p>H</p>
+				</div>
+				<div class="info-box li">
+					<p>Li</p>
+				</div>
+			</div>
+			<div class="table-container">
+				<form class="text-key">
+					<input type="checkbox" name="atomic-number" id="atomic-number" checked onclick="ShowHideNumber(this)">
+					<label for="atomic-number">Atomic Number</label></br>
+					<input type="checkbox" name="full-name" id="full-name" checked onclick="ShowHideName(this)">
+					<label for="full-name">Full Name</label></br>
+					<input type="checkbox" name="atomic-weight" id="atomic-weight" checked onclick="ShowHideAMU(this)">
+					<label for="atomic-weight">Atomic Weight</label></br>
+				</form>
+				<div class="color-key">
+					<div class="alkali-metal-key"></div>
+					<p>Alkali metals</p>
+					<div class="alkaline-earth-key"></div>
+					<p>Alkaline earth metals</p>
+					<div class="lanthanoid-key"></div>
+					<p>Lanthanoids</p>
+					<div class="actinoid-key"></div>
+					<p>Actinoids</p>
+					<div class="transition-metal-key"></div>
+					<p>Transition metals</p>
+					<div class="post-transition-metal-key"></div>
+					<p>Post-transition metals</p>
+					<div class="metalloid-key"></div>
+					<p>Metalloids</p>
+					<div class="other-nonmetal-key"></div>
+					<p>Other nonmetals</p>
+					<div class="noble-gas-key"></div>
+					<p>Noble Gasses</p>
+					<div class="none-key"></div>
+					<p>Unknown</p>
+				</div>
+				<div class="table1">
+								<div class="element other-nonmetal" id="h">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">1</p>
+										<p class="abr">H</p>
+										<p class="name">Hydrogen</p>
+										<p class="amu">1.008</p>
+									</a>
+								</div>
+								<div class="element noble-gas" id="he">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">2</p>
+										<p class="abr">He</p>
+										<p class="name">Helium</p>
+										<p class="amu">4.0026</p>
+									</a>
+								</div>
+								<div class="element alkali-metal" id="li">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">3</p>
+										<p class="abr">Li</p>
+										<p class="name">Lithium</p>
+										<p class="amu">6.94</p>
+									</a>
+								</div>
+								<div class="element alkaline-earth" id="be">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">4</p>
+										<p class="abr">Be</p>
+										<p class="name">Beryllium</p>
+										<p class="amu">9.0122</p>
+									</a>
+								</div>
+								<div class="element metalloid" id="b">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">5</p>
+										<p class="abr">B</p>
+										<p class="name">Boron</p>
+										<p class="amu">10.81</p>
+									</a>
+								</div>
+								<div class="element other-nonmetal" id="c">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">6</p>
+										<p class="abr">C</p>
+										<p class="name">Carbon</p>
+										<p class="amu">12.011</p>
+									</a>
+								</div>
+								<div class="element other-nonmetal" id="n">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">7</p>
+										<p class="abr">N</p>
+										<p class="name">Nitrogen</p>
+										<p class="amu">14.007</p>
+									</a>
+								</div>
+								<div class="element other-nonmetal" id="o">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">8</p>
+										<p class="abr">O</p>
+										<p class="name">Oxygen</p>
+										<p class="amu">15.999</p>
+									</a>
+								</div>
+								<div class="element other-nonmetal" id="f">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">9</p>
+										<p class="abr">F</p>
+										<p class="name">Fluorine</p>
+										<p class="amu">18.998</p>
+									</a>
+								</div>
+								<div class="element noble-gas" id="ne">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">10</p>
+										<p class="abr">Ne</p>
+										<p class="name">Neon</p>
+										<p class="amu">20.180</p>
+									</a>
+								</div>
+								<div class="element alkali-metal" id="na">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">11</p>
+										<p class="abr">Na</p>
+										<p class="name">Sodium</p>
+										<p class="amu">22.990</p>
+									</a>
+								</div>
+								<div class="element alkaline-earth" id="mg">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">12</p>
+										<p class="abr">Mg</p>
+										<p class="name">Magnesium</p>
+										<p class="amu">24.305</p>
+									</a>
+								</div>
+								<div class="element post-transition-metal" id="al">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">13</p>
+										<p class="abr">Al</p>
+										<p class="name">Aluminum</p>
+										<p class="amu">26.982</p>
+									</a>
+								</div>
+								<div class="element metalloid" id="si">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">14</p>
+										<p class="abr">Si</p>
+										<p class="name">Silicon</p>
+										<p class="amu">28.085</p>
+									</a>
+								</div>
+								<div class="element other-nonmetal" id="p">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">15</p>
+										<p class="abr">P</p>
+										<p class="name">Phosphorous</p>
+										<p class="amu">30.974</p>
+									</a>
+								</div>
+								<div class="element other-nonmetal" id="s">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">16</p>
+										<p class="abr">S</p>
+										<p class="name">Sulfur</p>
+										<p class="amu">32.06</p>
+									</a>
+								</div>
+								<div class="element other-nonmetal" id="cl">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">17</p>
+										<p class="abr">Cl</p>
+										<p class="name">Chlorine</p>
+										<p class="amu">35.45</p>
+									</a>
+								</div>
+								<div class="element noble-gas" id="ar">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">18</p>
+										<p class="abr">Ar</p>
+										<p class="name">Argon</p>
+										<p class="amu">39.948</p>
+									</a>
+								</div>
+								<div class="element alkali-metal" id="k">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">19</p>
+										<p class="abr">K</p>
+										<p class="name">Potassium</p>
+										<p class="amu">39.098</p>
+									</a>
+								</div>
+								<div class="element alkaline-earth" id="ca">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">20</p>
+										<p class="abr">Ca</p>
+										<p class="name">Calcium</p>
+										<p class="amu">40.078</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="sc">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">21</p>
+										<p class="abr">Sc</p>
+										<p class="name">Scandium</p>
+										<p class="amu">44.956</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="ti">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">22</p>
+										<p class="abr">Ti</p>
+										<p class="name">Titanium</p>
+										<p class="amu">47.867</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="v">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">23</p>
+										<p class="abr">V</p>
+										<p class="name">Vanadium</p>
+										<p class="amu">50.942</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="cr">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">24</p>
+										<p class="abr">Cr</p>
+										<p class="name">Chromium</p>
+										<p class="amu">51.996</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="mn">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">25</p>
+										<p class="abr">Mn</p>
+										<p class="name">Manganese</p>
+										<p class="amu">54.938</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="fe">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">26</p>
+										<p class="abr">Fe</p>
+										<p class="name">Iron</p>
+										<p class="amu">55.845</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="co">
+									<a href="#" onMouseDown="PausePlay(this)">								
+										<p class="atomic-number">27</p>
+										<p class="abr">Co</p>
+										<p class="name">Cobalt</p>
+										<p class="amu">58.933</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="ni">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">28</p>
+										<p class="abr">Ni</p>
+										<p class="name">Nickel</p>
+										<p class="amu">58.693</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="cu">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">29</p>
+										<p class="abr">Cu</p>
+										<p class="name">Copper</p>
+										<p class="amu">63.546</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="zn">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">30</p>
+										<p class="abr">Zn</p>
+										<p class="name">Zinc</p>
+										<p class="amu">65.38</p>
+									</a>
+								</div>
+								<div class="element post-transition-metal" id="ga">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">31</p>
+										<p class="abr">Ga</p>
+										<p class="name">Gallium</p>
+										<p class="amu">69.723</p>
+									</a>
+								</div>
+								<div class="element metalloid" id="ge">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">32</p>
+										<p class="abr">Ge</p>
+										<p class="name">Germanium</p>
+										<p class="amu">72.630</p>
+									</a>
+								</div>
+								<div class="element metalloid" id="as">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">33</p>
+										<p class="abr">As</p>
+										<p class="name">Arsenic</p>
+										<p class="amu">74.922</p>
+									</a>
+								</div>
+								<div class="element other-nonmetal" id="se">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">34</p>
+										<p class="abr">Se</p>
+										<p class="name">Selenium</p>
+										<p class="amu">78.971</p>
+									</a>
+								</div>
+								<div class="element other-nonmetal" id="br">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">35</p>
+										<p class="abr">Br</p>
+										<p class="name">Bromine</p>
+										<p class="amu">79.904</p>
+									</a>
+								</div>
+								<div class="element noble-gas" id="kr">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">36</p>
+										<p class="abr">Kr</p>
+										<p class="name">Krypton</p>
+										<p class="amu">83.798</p>
+									</a>
+								</div>
+								<div class="element alkali-metal" id="rb">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">37</p>
+										<p class="abr">Rb</p>
+										<p class="name">Rubidium</p>
+										<p class="amu">85.468</p>
+									</a>
+								</div>
+								<div class="element alkaline-earth" id="sr">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">38</p>
+										<p class="abr">Sr</p>
+										<p class="name">Strontium</p>
+										<p class="amu">87.62</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="y">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">39</p>
+										<p class="abr">Y</p>
+										<p class="name">Yttrium</p>
+										<p class="amu">88.906</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="zr">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">40</p>
+										<p class="abr">Zr</p>
+										<p class="name">Zirconium</p>
+										<p class="amu">91.224</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="nb">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">41</p>
+										<p class="abr">Nb</p>
+										<p class="name">Niobium</p>
+										<p class="amu">92.906</p>
+									</a>
+								</a>
+								</div>
+								<div class="element transition-metal" id="mo">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">42</p>
+										<p class="abr">Mo</p>
+										<p class="name">Molybdenum</p>
+										<p class="amu">95.95</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="tc">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">43</p>
+										<p class="abr">Tc</p>
+										<p class="name">Technetium</p>
+										<p class="amu">(98)</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="ru">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">44</p>
+										<p class="abr">Ru</p>
+										<p class="name">Rubidium</p>
+										<p class="amu">101.07</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="rh">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">45</p>
+										<p class="abr">Rh</p>
+										<p class="name">Rhodium</p>
+										<p class="amu">102.91</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="pd">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">46</p>
+										<p class="abr">Pd</p>
+										<p class="name">Palladium</p>
+										<p class="amu">106.42</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="ag">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">47</p>
+										<p class="abr">Ag</p>
+										<p class="name">Silver</p>
+										<p class="amu">107.87</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="cd">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">48</p>
+										<p class="abr">Cd</p>
+										<p class="name">Cadmium</p>
+										<p class="amu">112.41</p>
+									</a>
+								</div>
+								<div class="element post-transition-metal" id="in">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">49</p>
+										<p class="abr">In</p>
+										<p class="name">Indium</p>
+										<p class="amu">114.82</p>
+									</a>
+								</div>
+								<div class="element post-transition-metal" id="sn">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">50</p>
+										<p class="abr">Sn</p>
+										<p class="name">Tin</p>
+										<p class="amu">118.71</p>
+									</a>
+								</div>
+								<div class="element metalloid" id="sb">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">51</p>
+										<p class="abr">Sb</p>
+										<p class="name">Antimony</p>
+										<p class="amu">121.76</p>
+									</a>
+								</div>
+								<div class="element metalloid" id="te">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">52</p>
+										<p class="abr">Te</p>
+										<p class="name">Tellurium</p>
+										<p class="amu">127.60</p>
+									</a>
+								</div>
+								<div class="element other-nonmetal" id="i">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">53</p>
+										<p class="abr">I</p>
+										<p class="name">Iodine</p>
+										<p class="amu">126.90</p>
+									</a>
+								</div>
+								<div class="element noble-gas" id="xe">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">54</p>
+										<p class="abr">Xe</p>
+										<p class="name">Xenon</p>
+										<p class="amu">131.29</p>
+									</a>
+								</div>
+								<div class="element alkali-metal" id="cs">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">55</p>
+										<p class="abr">Cs</p>
+										<p class="name">Caesium</p>
+										<p class="amu">132.91</p>
+									</a>
+								</div>
+								<div class="element alkaline-earth" id="ba">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">56</p>
+										<p class="abr">Ba</p>
+										<p class="name">Barium</p>
+										<p class="amu">137.33</p>
+									</a>
+								</div>
+								<div class="element lanthanoid" id="la">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">57</p>
+										<p class="abr">La</p>
+										<p class="name">Lanthanum</p>
+										<p class="amu">138.91</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="hf">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">72</p>
+										<p class="abr">Hf</p>
+										<p class="name">Hafnium</p>
+										<p class="amu">178.49</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="ta">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">73</p>
+										<p class="abr">Ta</p>
+										<p class="name">Tantalum</p>
+										<p class="amu">180.95</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="w">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">74</p>
+										<p class="abr">W</p>
+										<p class="name">Tungsten</p>
+										<p class="amu">183.84</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="re">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">75</p>
+										<p class="abr">Re</p>
+										<p class="name">Rhenium</p>
+										<p class="amu">186.21</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="os">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">76</p>
+										<p class="abr">Os</p>
+										<p class="name">Osmium</p>
+										<p class="amu">190.23</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="ir">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">77</p>
+										<p class="abr">Ir</p>
+										<p class="name">Iridium</p>
+										<p class="amu">192.22</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="pt">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">78</p>
+										<p class="abr">Pt</p>
+										<p class="name">Platinum</p>
+										<p class="amu">195.08</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="au">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">79</p>
+										<p class="abr">Au</p>
+										<p class="name">Gold</p>
+										<p class="amu">196.97</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="hg">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">80</p>
+										<p class="abr">Hg</p>
+										<p class="name">Mercury</p>
+										<p class="amu">200.59</p>
+									</a>
+								</div>
+								<div class="element post-transition-metal" id="tl">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">81</p>
+										<p class="abr">Tl</p>
+										<p class="name">Thallium</p>
+										<p class="amu">204.38</p>
+									</a>
+								</div>
+								<div class="element post-transition-metal" id="pb">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">82</p>
+										<p class="abr">Pb</p>
+										<p class="name">Lead</p>
+										<p class="amu">207.2</p>
+									</a>
+								</div>
+								<div class="element post-transition-metal" id="bi">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">83</p>
+										<p class="abr">Bi</p>
+										<p class="name">Bismuth</p>
+										<p class="amu">208.98</p>
+									</a>
+								</div>
+								<div class="element post-transition-metal" id="po">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">84</p>
+										<p class="abr">Po</p>
+										<p class="name">Polonium</p>
+										<p class="amu">(209)</p>
+									</a>
+								</div>
+								<div class="element metalloid" id="at">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">85</p>
+										<p class="abr">At</p>
+										<p class="name">Astatine</p>
+										<p class="amu">(210)</p>
+									</a>
+								</div>
+								<div class="element noble-gas" id="rn">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">86</p>
+										<p class="abr">Rn</p>
+										<p class="name">Radon</p>
+										<p class="amu">(222)</p>
+									</a>
+								</div>
+								<div class="element alkali-metal" id="fr">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">87</p>
+										<p class="abr">Fr</p>
+										<p class="name">Francium</p>
+										<p class="amu">(223)</p>
+									</a>
+								</div>
+								<div class="element alkaline-earth" id="ra">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">88</p>
+										<p class="abr">Ra</p>
+										<p class="name">Radium</p>
+										<p class="amu">(206)</p>
+									</a>
+								</div>
+								<div class="element actinoid" id="ac">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">89</p>
+										<p class="abr">Ac</p>
+										<p class="name">Actinium</p>
+										<p class="amu">(227)</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="rf">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">104</p>
+										<p class="abr">Rf</p>
+										<p class="name">Rutherfordium</p>
+										<p class="amu">(267)</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="db">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">105</p>
+										<p class="abr">Db</p>
+										<p class="name">Dubnium</p>
+										<p class="amu">(268)</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="sg">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">106</p>
+										<p class="abr">Sg</p>
+										<p class="name">Seaborgium</p>
+										<p class="amu">(269)</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="bh">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">107</p>
+										<p class="abr">Bh</p>
+										<p class="name">Bohrium</p>
+										<p class="amu">(270)</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="hs">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">108</p>
+										<p class="abr">Hs</p>
+										<p class="name">Hassium</p>
+										<p class="amu">(270)</p>
+									</a>
+								</div>
+								<div class="element none" id="mt">
+										<a href="#" onMouseDown="PausePlay(this)">
+											<p class="atomic-number">109</p>
+											<p class="abr">Mt</p>
+											<p class="name">Meitnerium</p>
+											<p class="amu">(278)</p>
+										</a>
+									</div>
+								<div class="element none" id="ds">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">110</p>
+										<p class="abr">Ds</p>
+										<p class="name">Darmstadtium</p>
+										<p class="amu">(281)</p>
+									</a>
+								</div>
+								<div class="element none" id="rg">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">111</p>
+										<p class="abr">Rg</p>
+										<p class="name">Roentgenium</p>
+										<p class="amu">(282)</p>
+									</a>
+								</div>
+								<div class="element transition-metal" id="cn">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">112</p>
+										<p class="abr">Cn</p>
+										<p class="name">Copernicium</p>
+										<p class="amu">(285)</p>
+									</a>
+								</div>
+								<div class="element none" id="nh">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">113</p>
+										<p class="abr">Nh</p>
+										<p class="name">Nihonium</p>
+										<p class="amu">(286)</p>
+									</a>
+								</div>
+								<div class="element post-transition-metal" id="fl">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">114</p>
+										<p class="abr">Fl</p>
+										<p class="name">Flerovium</p>
+										<p class="amu">(289)</p>
+									</a>
+								</div>
+								<div class="element none" id="mc">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">115</p>
+										<p class="abr">Mc</p>
+										<p class="name">Moscovium</p>
+										<p class="amu">(290)</p>
+									</a>
+								</div>
+								<div class="element none" id="lv">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">116</p>
+										<p class="abr">Lv</p>
+										<p class="name">Livermorium</p>
+										<p class="amu">(293)</p>
+									</a>
+								</div>
+								<div class="element none" id="ts">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">117</p>
+										<p class="abr">Ts</p>
+										<p class="name">Tennessine</p>
+										<p class="amu">(294)</p>
+									</a>
+								</div>
+								<div class="element none" id="og">
+									<a href="#" onMouseDown="PausePlay(this)">
+										<p class="atomic-number">118</p>
+										<p class="abr">Og</p>
+										<p class="name">Oganesson</p>
+										<p class="amu">(294)</p>
+									</a>
+								</div>
+									<div class="table2">
+										<div class="element lanthanoid" id="ce">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">58</p>
+												<p class="abr">Ce</p>
+												<p class="name">Cerium</p>
+												<p class="amu">140.12</p>
+											</a>
+										</div>
+										<div class="element lanthanoid" id="pr">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">59</p>
+												<p class="abr">Pr</p>
+												<p class="name">Prseodymium</p>
+												<p class="amu">140.91</p>
+											</a>
+										</div>
+										<div class="element lanthanoid" id="nd">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">60</p>
+												<p class="abr">Nd</p>
+												<p class="name">Neodynium</p>
+												<p class="amu">144.24</p>
+											</a>
+										</div>
+										<div class="element lanthanoid" id="pm">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">61</p>
+												<p class="abr">Pm</p>
+												<p class="name">Promethium</p>
+												<p class="amu">(145)</p>
+											</a>
+										</div>
+										<div class="element lanthanoid" id="sm">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">62</p>
+												<p class="abr">Sm</p>
+												<p class="name">Samarium</p>
+												<p class="amu">150.36</p>
+											</a>
+										</div>
+										<div class="element lanthanoid" id="eu">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">63</p>
+												<p class="abr">Eu</p>
+												<p class="name">Europium</p>
+												<p class="amu">151.96</p>
+											</a>
+										</div>
+										<div class="element lanthanoid" id="gd">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">64</p>
+												<p class="abr">Gd</p>
+												<p class="name">Gadolinium</p>
+												<p class="amu">157.25</p>
+											</a>
+										</div>
+										<div class="element lanthanoid" id="tb">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">65</p>
+												<p class="abr">Tb</p>
+												<p class="name">Terbium</p>
+												<p class="amu">158.93</p>
+											</a>
+										</div>
+										<div class="element lanthanoid" id="dy">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">66</p>
+												<p class="abr">Dy</p>
+												<p class="name">Dyprosium</p>
+												<p class="amu">162.50</p>
+											</a>
+										</div>
+										<div class="element lanthanoid" id="ho">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">67</p>
+												<p class="abr">Ho</p>
+												<p class="name">Holmium</p>
+												<p class="amu">164.93</p>
+											</a>
+										</div>
+										<div class="element lanthanoid" id="er">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">68</p>
+												<p class="abr">Er</p>
+												<p class="name">Erbium</p>
+												<p class="amu">167.26</p>
+											</a>
+										</div>
+										<div class="element lanthanoid" id="tm">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">69</p>
+												<p class="abr">Tm</p>
+												<p class="name">Thulium</p>
+												<p class="amu">168.93</p>
+											</a>
+										</div>
+										<div class="element lanthanoid" id="yb">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">70</p>
+												<p class="abr">Yb</p>
+												<p class="name">Ytterbium</p>
+												<p class="amu">173.05</p>
+											</a>
+										</div>
+										<div class="element lanthanoid" id="lu">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">71</p>
+												<p class="abr">Lu</p>
+												<p class="name">Lutetium</p>
+												<p class="amu">174.97</p>
+											</a>
+										</div>
+										<div class="element actinoid" id="th">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">90</p>
+												<p class="abr">Th</p>
+												<p class="name">Thorium</p>
+												<p class="amu">232.04</p>
+											</a>
+										</div>
+										<div class="element actinoid" id="pa">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">91</p>
+												<p class="abr">Pa</p>
+												<p class="name">Protactinium</p>
+												<p class="amu">231.04</p>
+											</a>
+										</div>
+										<div class="element actinoid" id="u">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">92</p>
+												<p class="abr">U</p>
+												<p class="name">Uranium</p>
+												<p class="amu">238.03</p>
+											</a>
+										</div>
+										<div class="element actinoid" id="np">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">93</p>
+												<p class="abr">Np</p>
+												<p class="name">Neptunium</p>
+												<p class="amu">(237)</p>
+											</a>
+										</div>
+										<div class="element actinoid" id="pu">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">94</p>
+												<p class="abr">Pu</p>
+												<p class="name">Plutonium</p>
+												<p class="amu">(244)</p>
+											</a>
+										</div>
+										<div class="element actinoid" id="am">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">95</p>
+												<p class="abr">Am</p>
+												<p class="name">Americium</p>
+												<p class="amu">(243)</p>
+											</a>
+										</div>
+										<div class="element actinoid" id="cm">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">96</p>
+												<p class="abr">Cm</p>
+												<p class="name">Curium</p>
+												<p class="amu">(247)</p>
+											</a>
+										</div>
+										<div class="element actinoid" id="bk">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">97</p>
+												<p class="abr">Bk</p>
+												<p class="name">Berkelium</p>
+												<p class="amu">(247)</p>
+											</a>
+										</div>
+										<div class="element actinoid" id="cf">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">98</p>
+												<p class="abr">Cf</p>
+												<p class="name">Californium</p>
+												<p class="amu">(251)</p>
+											</a>
+										</div>
+										<div class="element actinoid" id="es">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">99</p>
+												<p class="abr">Es</p>
+												<p class="name">Einsteinium</p>
+												<p class="amu">(252)</p>
+											</a>
+										</div>
+										<div class="element actinoid" id="fm">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">100</p>
+												<p class="abr">Fm</p>
+												<p class="name">Fermium</p>
+												<p class="amu">(257)</p>
+											</a>
+										</div>
+										<div class="element actinoid" id="md">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">101</p>
+												<p class="abr">Md</p>
+												<p class="name">Mendelevium</p>
+												<p class="amu">(258)</p>
+											</a>
+										</div>
+										<div class="element actinoid" id="no">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">102</p>
+												<p class="abr">No</p>
+												<p class="name">Nobelium</p>
+												<p class="amu">(259)</p>
+											</a>
+										</div>
+										<div class="element actinoid" id="lr">
+											<a href="#" onMouseDown="PausePlay(this)">
+												<p class="atomic-number">103</p>
+												<p class="abr">Lr</p>
+												<p class="name">Lawrencium</p>
+												<p class="amu">(266)</p>
+											</a>
+										</div>
+				</div>
+			</div>
+			</div>
+			<div class="movie-box">
+				<div id="canvas"></div>
+			</div>
+		</div>
+		<audio controls id="audio-player">
+			<source type="audio/wav">
+		</audio>
+		<p class="audioDNE">
+			No sound available. <a href="#">Find out why</a>
+		</p>
+		<p class="credit">Sound files created from the research of Asegun Henry, Kiarash Gordiz, Angel Chavira, and Max Thomsen</p>
+		<p class="webCredit">Website by Max Thomsen</p>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+		<script src="Js/three.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+		<script language="javascript" src="Js/script.js"></script>
+	</body>
+</html>
