@@ -1,13 +1,13 @@
-
 function PausePlay(el) {
     var el = el.getElementsByClassName('name')[0].innerHTML;
     var audioPlayer = document.getElementById("audio-player");
     audioPlayer.style.visibility = "visible";
-    console.log(audioPlayer.currentSrc.substring(73)); //This is a major source of bugs with sound player!!! fix pls!
-    if ((audioPlayer.paused === false) && (audioPlayer.currentSrc.substring(73) === "Sounds/" + el + ".wav")) {
+    console.log("Sounds/" + el + ".wav")
+    console.log(audioPlayer.currentSrc.substring(35)); //This is a major source of bugs with sound player!!! fix pls!
+    if ((audioPlayer.paused === false) && (audioPlayer.currentSrc.substring(35) === el + ".wav")) {
         audioPlayer.pause();
     }
-    else if ((audioPlayer.paused === true) && (audioPlayer.currentSrc.substring(73) === "Sounds/" + el + ".wav")){
+    else if ((audioPlayer.paused === true) && (audioPlayer.currentSrc.substring(35) === el + ".wav")){
         audioPlayer.play();
     }
     else {
@@ -15,7 +15,6 @@ function PausePlay(el) {
         audioPlayer.play();
     }
 }
-
 
 function ShowHideAMU(AMUchecked) {
     var amu = document.getElementsByClassName('amu');
@@ -99,6 +98,7 @@ function fileClicked(file) {
         checkBox.classList.add('checkmark-visible');
         document.getElementById(fileName).classList.add('checked');
     }
+    buttonUpdate();
 }
 
 
@@ -124,17 +124,17 @@ function selectAllChecked() {
             tiles[i].classList.add('checked');
         }
     }
+    buttonUpdate();
 }
 
 
 
-$('.checkbox-container > input').click(function() {
+$('.checkbox-container-main input').click(function() {
     boxChecked(this);
 });
 
 function boxChecked(box) {
     var name = box.name;
-    console.log(name);
     if (box.nextElementSibling.classList.contains('checkmark-visible')) {
         box.nextElementSibling.classList.remove('checkmark-visible');
         document.getElementById(name).classList.remove('checked');
@@ -143,16 +143,17 @@ function boxChecked(box) {
         box.nextElementSibling.classList.add('checkmark-visible');
         document.getElementById(name).classList.add('checked');
     }
+    buttonUpdate();
 }
 
 
-$('.table-graph-container > div').click(function(){
+$('.table-graph-container .element').click(function(){
     tileClicked(this);
 })
 
 function tileClicked(tile) {
-    var name = tile.id;
-    var checkBox = document.getElementsByName(name)[0].nextElementSibling;
+    var id = tile.id;
+    var checkBox = document.getElementsByName(id)[0].nextElementSibling;
     if (tile.classList.contains('checked')) {
         tile.classList.remove('checked');
         checkBox.classList.remove('checkmark-visible');
@@ -161,10 +162,35 @@ function tileClicked(tile) {
         tile.classList.add('checked');
         checkBox.classList.add('checkmark-visible');
     }
+    buttonUpdate();
 }
 
 //-----------Download Button------------//
 
+function buttonUpdate() {
+    if ($('.checkmark-visible').length == 0) {
+        $('.download-button').hide(400);
+        $('.download-description').hide(400);
+    }
+    else {
+        var files = $('.checkmark-visible');
+        var num = files.length;
+        let fileSize = 0;
+        for (i=0; i<files.length; i++) {
+            var adder = files[i].title;
+            fileSize += parseInt(adder);
+        }
+        fileSize = fileSize/1000;
+            if ($('.checkmark-visible').length == 1) {
+                $('.download-description').html(num + " file | " + Math.round(fileSize) + " MB");
+            } 
+            else {
+                $('.download-description').html(num + " files | " + Math.round(fileSize) + " MB");
+            }
+        $('.download-button').show(400);
+        $('.download-description').show(400);
+    }
+}
 
 function urlToPromise(url) {
     return new Promise(function(resolve, reject) {
@@ -196,19 +222,3 @@ function downloadZip() {
     saveAs(blob, "Sounds.zip");
     });
 }
-
-/*
-var zip = new JSZip();
-var soundsZip = zip.folder("Sounds");
-
-for (i=0; i<folder.length; i++) {
-    var url;
-    var filename = folder[i];
-
-    JSZipUtils.getBinaryContent(url, function(err, data) {
-
-    });
-}
-
-
-});*/

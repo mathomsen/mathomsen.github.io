@@ -349,7 +349,7 @@ audio
 .download-container-main
 {
 	width: 900px;
-	height: 550px;
+	height: 530px;
 	margin: 50px auto;
 	border-radius: 9px;
 	background-color: #F0F1F3;
@@ -361,7 +361,7 @@ audio
 	display: inline-block;
 	position: relative;
 	top: 40px;
-	height: 510px;
+	height: 490px;
 	width: 266px;
 	overflow-x: hidden;
 	margin-left: 5px;
@@ -478,7 +478,7 @@ audio
 	display: inline-block;
 	height: 600px;
 	position: relative;
-	bottom: 435px;
+	bottom: 415px;
 	left: 70px
 }
 .table-graph-container .element
@@ -535,13 +535,14 @@ audio
 	position: absolute;
 	padding: 15px 50px;
 	border: 1px solid #A9A9A9;
-	top: 400px;
+	top: 390px;
 	left: 510px;
 	text-decoration: none;
 	font-family: Arial, "Arial Unicode MS", sans-serif;
 	font-weight: lighter;
 	color: #525252;
 	border-radius: 5px;
+	display: none;
 }
 .download-button:hover
 {
@@ -550,4 +551,51 @@ audio
 .download-button:active
 {
 	background-color: #bfbfbf;
+}
+.download-description
+{
+	position: absolute;
+	top: 445px;
+	left: 525px;
+	font-family: Arial, "Arial Unicode MS", sans-serif;
+	font-weight: lighter;
+	color: #525252;
+	font-size: 0.85em;
+	text-align: center;
+	width: 140px;
+	display: none;
+}
+
+/*--------About Page------*/
+
+.portrait {
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	/*box-shadow: 0 0 20px 5px grey;*/
+	top: 50px;
+}
+.about-me {
+	position: relative;
+	top: 100px;
+	display: inline;
+}
+.about-me-container {
+	text-align: center;
+	width: 420px;
+	margin: auto;
+	font-family: Arial, "Arial Unicode MS", sans-serif;
+}
+.about-me-container a {
+	text-decoration: none;
+}
+
+.construction {
+	font-size: 3em;
+	text-align: center;
+	position: relative;
+	top: 300px;
 }
