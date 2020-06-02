@@ -5,7 +5,7 @@ function PausePlay(el) {
     audioPlayer.style.visibility = "visible";
     var playerLength = audioPlayer.currentSrc.length;
     var playerSource = audioPlayer.currentSrc.substring(playerLength - 14); //This is a major source of bugs with sound player!!! fix pls!
-    var currentEl = "Sounds/" + el + ".wav";
+    var currentEl = "sounds/" + el + ".wav";
     currentEl = currentEl.substring(currentEl.length - 14);
     if ((audioPlayer.paused === false) && (playerSource == currentEl)) {
         audioPlayer.pause();
@@ -14,7 +14,7 @@ function PausePlay(el) {
         audioPlayer.play();
     }
     else {
-        audioPlayer.src = "Sounds/" + el + ".wav";
+        audioPlayer.src = "sounds/" + el + ".wav";
         audioPlayer.play();
     }
 }
@@ -215,14 +215,14 @@ function downloadZip() {
     var folder = [];
     for (i=0; i<files.length; i++) {
         if (files[i].classList.contains('checkmark-visible')) {
-            var fileName = "Sounds/" + files[i].previousElementSibling.name + ".wav";
+            var fileName = "sounds/" + files[i].previousElementSibling.name + ".wav";
             zip.file(fileName, urlToPromise(fileName), {binary:true});
-            //folder.push("Sounds/" + files[i].previousElementSibling.name + ".wav");
+            //folder.push("sounds/" + files[i].previousElementSibling.name + ".wav");
         }
     }
     zip.generateAsync({type:"blob"})
     .then(function(blob) {
-    saveAs(blob, "Sounds.zip");
+    saveAs(blob, "sounds.zip");
     });
 }
 
