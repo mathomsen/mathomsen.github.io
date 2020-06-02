@@ -257,7 +257,7 @@ function frameLooper() {
     fbc_array = new Uint8Array(analyser.frequencyBinCount);
     analyser.getByteFrequencyData(fbc_array);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = 'black';
+    ctx.fillStyle = 'white';
     bars = 100;
     for (var i = 0; i<bars; i++) {
         bar_x = i * 3;
