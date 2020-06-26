@@ -1,4 +1,9 @@
 var audioPlayer = document.getElementById("audio-player");
+let loudSounds = ["Hydrogen","Carbon","Fluorine","Phosphorous"];
+$('.table1 .element:not(.soundDNE)').click(function(){
+    PausePlay(this);
+})
+
 
 function PausePlay(el) {
     var el = el.getElementsByClassName('name')[0].innerHTML;
@@ -14,8 +19,16 @@ function PausePlay(el) {
         audioPlayer.play();
     }
     else {
-        audioPlayer.src = "sounds/" + el + ".wav";
-        audioPlayer.play();
+        if (loudSounds.includes(el)) {
+            if (confirm("WARNING: Please ensure your volume is set to low before continuing.")) {
+                audioPlayer.src = "sounds/" + el + ".wav";
+                audioPlayer.play();
+            }
+        }
+        else {
+            audioPlayer.src = "sounds/" + el + ".wav";
+            audioPlayer.play();
+        }
     }
 }
 
@@ -108,8 +121,7 @@ function fileClicked(file) {
 
 
 function selectAllChecked() {
-    var tiles = document.getElementsByClassName('element');
-    console.log(tiles);
+    var tiles = $('.element:not(.soundDNE)');
     var boxes = document.getElementsByClassName('checkmark');
     if (document.getElementById('select-all-box').classList.contains('checkmark-visible')) {
         for (i=0; i<boxes.length; i++) {
@@ -176,11 +188,13 @@ function buttonUpdate() {
         $('.download-description').hide(400);
     }
     else {
-        var files = $('.checkmark-visible');
+        var files = $('.checkbox-container-main .checkmark-visible');
         var num = files.length;
         let fileSize = 0;
         for (i=0; i<files.length; i++) {
             var adder = files[i].title;
+            console.log(files[i]);
+            console.log(adder);
             fileSize += parseInt(adder);
         }
         fileSize = fileSize/1000;
@@ -266,3 +280,18 @@ function frameLooper() {
         ctx.fillRect(bar_x, canvas.height, bar_width, bar_height);
     }
 }
+
+//Add audio symbol to corner of elements with sound
+$('.table1 .element:not(.soundDNE)').append('<img class="DNE1" src="img/audio.svg" width="12" height="12">');
+$('.table-graph-container .element.soundDNE').append('<img class="DNE2" src="img/nosound.svg" width="24.66" height="29.8">');
+$('.DNE1').css("position", "absolute");
+$('.DNE2').css("position", "absolute");
+$('.DNE1').css("margin", "3px 2px");
+
+
+//Remove click mouse from non-clickable elements
+$('.soundDNE a').removeAttr("href");
+
+//Remove highlighting ability  from all elements (just makes things cleaner)
+$('.element > a > p').css({'user-select': 'none', '-webkit-user-select': 'none', '-moz-user-select': 'none', '-ms-user-select': 'none'});
+$('.element > p').css({'user-select': 'none', '-webkit-user-select': 'none', '-moz-user-select': 'none', '-ms-user-select': 'none'});
